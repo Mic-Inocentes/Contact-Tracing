@@ -31,18 +31,20 @@ namespace Contact_Tracing
         {
             this.bttnSave = new System.Windows.Forms.Button();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.txtboxLastName = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblPronouns = new System.Windows.Forms.Label();
-            this.txtboxAge = new System.Windows.Forms.TextBox();
             this.txtboxPronouns = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtboxAddress = new System.Windows.Forms.TextBox();
+            this.txtboxAge = new System.Windows.Forms.TextBox();
+            this.txtboxFirstName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnSave
             // 
-            this.bttnSave.Location = new System.Drawing.Point(312, 114);
+            this.bttnSave.Location = new System.Drawing.Point(311, 145);
             this.bttnSave.Name = "bttnSave";
             this.bttnSave.Size = new System.Drawing.Size(75, 20);
             this.bttnSave.TabIndex = 7;
@@ -58,13 +60,6 @@ namespace Contact_Tracing
             this.lblFirstName.Size = new System.Drawing.Size(57, 13);
             this.lblFirstName.TabIndex = 8;
             this.lblFirstName.Text = "First Name";
-            // 
-            // txtboxFirstName
-            // 
-            this.txtboxFirstName.Location = new System.Drawing.Point(27, 36);
-            this.txtboxFirstName.Name = "txtboxFirstName";
-            this.txtboxFirstName.Size = new System.Drawing.Size(168, 20);
-            this.txtboxFirstName.TabIndex = 9;
             // 
             // txtboxLastName
             // 
@@ -85,7 +80,7 @@ namespace Contact_Tracing
             // lblAge
             // 
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(24, 77);
+            this.lblAge.Location = new System.Drawing.Point(75, 110);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(29, 13);
             this.lblAge.TabIndex = 12;
@@ -94,39 +89,64 @@ namespace Contact_Tracing
             // lblPronouns
             // 
             this.lblPronouns.AutoSize = true;
-            this.lblPronouns.Location = new System.Drawing.Point(216, 77);
+            this.lblPronouns.Location = new System.Drawing.Point(188, 110);
             this.lblPronouns.Name = "lblPronouns";
             this.lblPronouns.Size = new System.Drawing.Size(55, 13);
             this.lblPronouns.TabIndex = 13;
             this.lblPronouns.Text = "Pronouns:";
             // 
-            // txtboxAge
-            // 
-            this.txtboxAge.Location = new System.Drawing.Point(56, 74);
-            this.txtboxAge.Name = "txtboxAge";
-            this.txtboxAge.Size = new System.Drawing.Size(139, 20);
-            this.txtboxAge.TabIndex = 14;
-            // 
             // txtboxPronouns
             // 
-            this.txtboxPronouns.Location = new System.Drawing.Point(274, 74);
+            this.txtboxPronouns.Location = new System.Drawing.Point(249, 107);
             this.txtboxPronouns.Name = "txtboxPronouns";
-            this.txtboxPronouns.Size = new System.Drawing.Size(113, 20);
+            this.txtboxPronouns.Size = new System.Drawing.Size(137, 20);
             this.txtboxPronouns.TabIndex = 15;
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(55, 75);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(48, 13);
+            this.lblAddress.TabIndex = 16;
+            this.lblAddress.Text = "Address:";
+            // 
+            // txtboxAddress
+            // 
+            this.txtboxAddress.Location = new System.Drawing.Point(109, 72);
+            this.txtboxAddress.Name = "txtboxAddress";
+            this.txtboxAddress.Size = new System.Drawing.Size(277, 20);
+            this.txtboxAddress.TabIndex = 17;
+            // 
+            // txtboxAge
+            // 
+            this.txtboxAge.Location = new System.Drawing.Point(109, 107);
+            this.txtboxAge.Name = "txtboxAge";
+            this.txtboxAge.Size = new System.Drawing.Size(64, 20);
+            this.txtboxAge.TabIndex = 18;
+            // 
+            // txtboxFirstName
+            // 
+            this.txtboxFirstName.Location = new System.Drawing.Point(27, 36);
+            this.txtboxFirstName.Name = "txtboxFirstName";
+            this.txtboxFirstName.Size = new System.Drawing.Size(168, 20);
+            this.txtboxFirstName.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(416, 155);
-            this.Controls.Add(this.txtboxPronouns);
+            this.ClientSize = new System.Drawing.Size(416, 182);
+            this.Controls.Add(this.txtboxFirstName);
             this.Controls.Add(this.txtboxAge);
+            this.Controls.Add(this.txtboxAddress);
+            this.Controls.Add(this.lblAddress);
+            this.Controls.Add(this.txtboxPronouns);
             this.Controls.Add(this.lblPronouns);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.txtboxLastName);
-            this.Controls.Add(this.txtboxFirstName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.bttnSave);
             this.Name = "Form1";
@@ -140,13 +160,15 @@ namespace Contact_Tracing
         #endregion
         private System.Windows.Forms.Button bttnSave;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.TextBox txtboxFirstName;
         private System.Windows.Forms.TextBox txtboxLastName;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblPronouns;
-        private System.Windows.Forms.TextBox txtboxAge;
         private System.Windows.Forms.TextBox txtboxPronouns;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TextBox txtboxAddress;
+        private System.Windows.Forms.TextBox txtboxAge;
+        private System.Windows.Forms.TextBox txtboxFirstName;
     }
 }
 

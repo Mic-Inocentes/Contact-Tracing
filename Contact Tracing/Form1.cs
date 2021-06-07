@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Activities.Expressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,18 +21,18 @@ namespace Contact_Tracing
 
         private void bttnSave_Click(object sender, EventArgs e)
         {
-            saveInfo(txtboxFirstName.Text, txtboxLastName.Text, byte.Parse(txtboxAge.Text), txtboxPronouns.Text);
+            saveInfo(txtboxFirstName.Text, txtboxLastName.Text, txtboxAddress.Text, byte.Parse(txtboxAge.Text), txtboxPronouns.Text);
         }
 
-        private void saveInfo(String FirstName, String LastName, byte Age, String Pronouns)
+        private void saveInfo(String FirstName, String LastName, String Address, byte Age, String Pronouns)
         {
             StreamWriter outputfile = File.AppendText("output.txt");
             outputfile.WriteLine(FirstName);
             outputfile.WriteLine(LastName);
+            outputfile.WriteLine(Address);
             outputfile.WriteLine(Age.ToString());
             outputfile.WriteLine(Pronouns);
             outputfile.Close();
         }
-
     }
 }
