@@ -55,14 +55,17 @@ namespace Contact_Tracing
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblFirstName.Location = new System.Drawing.Point(24, 20);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(57, 13);
+            this.lblFirstName.Size = new System.Drawing.Size(61, 15);
             this.lblFirstName.TabIndex = 8;
             this.lblFirstName.Text = "First Name";
             // 
             // txtboxLastName
             // 
+            this.txtboxLastName.BackColor = System.Drawing.Color.SeaShell;
             this.txtboxLastName.Location = new System.Drawing.Point(219, 36);
             this.txtboxLastName.Name = "txtboxLastName";
             this.txtboxLastName.Size = new System.Drawing.Size(168, 20);
@@ -71,32 +74,36 @@ namespace Contact_Tracing
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLastName.Location = new System.Drawing.Point(216, 20);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(58, 13);
+            this.lblLastName.Size = new System.Drawing.Size(59, 15);
             this.lblLastName.TabIndex = 11;
             this.lblLastName.Text = "Last Name";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.Location = new System.Drawing.Point(75, 110);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(29, 13);
+            this.lblAge.Size = new System.Drawing.Size(29, 15);
             this.lblAge.TabIndex = 12;
             this.lblAge.Text = "Age:";
             // 
             // lblPronouns
             // 
             this.lblPronouns.AutoSize = true;
+            this.lblPronouns.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPronouns.Location = new System.Drawing.Point(188, 110);
             this.lblPronouns.Name = "lblPronouns";
-            this.lblPronouns.Size = new System.Drawing.Size(55, 13);
+            this.lblPronouns.Size = new System.Drawing.Size(56, 15);
             this.lblPronouns.TabIndex = 13;
             this.lblPronouns.Text = "Pronouns:";
             // 
             // txtboxPronouns
             // 
+            this.txtboxPronouns.BackColor = System.Drawing.Color.SeaShell;
             this.txtboxPronouns.Location = new System.Drawing.Point(249, 107);
             this.txtboxPronouns.Name = "txtboxPronouns";
             this.txtboxPronouns.Size = new System.Drawing.Size(137, 20);
@@ -105,14 +112,16 @@ namespace Contact_Tracing
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(55, 75);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(48, 13);
+            this.lblAddress.Size = new System.Drawing.Size(50, 15);
             this.lblAddress.TabIndex = 16;
             this.lblAddress.Text = "Address:";
             // 
             // txtboxAddress
             // 
+            this.txtboxAddress.BackColor = System.Drawing.Color.SeaShell;
             this.txtboxAddress.Location = new System.Drawing.Point(109, 72);
             this.txtboxAddress.Name = "txtboxAddress";
             this.txtboxAddress.Size = new System.Drawing.Size(277, 20);
@@ -120,6 +129,7 @@ namespace Contact_Tracing
             // 
             // txtboxAge
             // 
+            this.txtboxAge.BackColor = System.Drawing.Color.SeaShell;
             this.txtboxAge.Location = new System.Drawing.Point(109, 107);
             this.txtboxAge.Name = "txtboxAge";
             this.txtboxAge.Size = new System.Drawing.Size(64, 20);
@@ -127,6 +137,7 @@ namespace Contact_Tracing
             // 
             // txtboxFirstName
             // 
+            this.txtboxFirstName.BackColor = System.Drawing.Color.SeaShell;
             this.txtboxFirstName.Location = new System.Drawing.Point(27, 36);
             this.txtboxFirstName.Name = "txtboxFirstName";
             this.txtboxFirstName.Size = new System.Drawing.Size(168, 20);
@@ -136,7 +147,7 @@ namespace Contact_Tracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(416, 182);
             this.Controls.Add(this.txtboxFirstName);
             this.Controls.Add(this.txtboxAge);
