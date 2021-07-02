@@ -1,7 +1,7 @@
 ﻿
 namespace Contact_Tracing
 {
-    partial class Form1
+    partial class ContactTracing
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,26 @@ namespace Contact_Tracing
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblPronouns = new System.Windows.Forms.Label();
-            this.txtboxPronouns = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtboxAddress = new System.Windows.Forms.TextBox();
             this.txtboxAge = new System.Windows.Forms.TextBox();
             this.txtboxFirstName = new System.Windows.Forms.TextBox();
+            this.lblContactNumber = new System.Windows.Forms.Label();
+            this.txtboxContactNumber = new System.Windows.Forms.TextBox();
+            this.txtboxTemperature = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bttnSave
             // 
-            this.bttnSave.Location = new System.Drawing.Point(311, 145);
+            this.bttnSave.BackColor = System.Drawing.Color.SeaShell;
+            this.bttnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnSave.Location = new System.Drawing.Point(114, 185);
             this.bttnSave.Name = "bttnSave";
-            this.bttnSave.Size = new System.Drawing.Size(75, 20);
+            this.bttnSave.Size = new System.Drawing.Size(178, 25);
             this.bttnSave.TabIndex = 7;
-            this.bttnSave.Text = "&Save";
-            this.bttnSave.UseVisualStyleBackColor = true;
+            this.bttnSave.Text = "Save Information";
+            this.bttnSave.UseVisualStyleBackColor = false;
             this.bttnSave.Click += new System.EventHandler(this.bttnSave_Click);
             // 
             // lblFirstName
@@ -85,7 +90,7 @@ namespace Contact_Tracing
             // 
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(75, 110);
+            this.lblAge.Location = new System.Drawing.Point(74, 139);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(29, 15);
             this.lblAge.TabIndex = 12;
@@ -95,25 +100,17 @@ namespace Contact_Tracing
             // 
             this.lblPronouns.AutoSize = true;
             this.lblPronouns.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPronouns.Location = new System.Drawing.Point(188, 110);
+            this.lblPronouns.Location = new System.Drawing.Point(190, 139);
             this.lblPronouns.Name = "lblPronouns";
-            this.lblPronouns.Size = new System.Drawing.Size(56, 15);
+            this.lblPronouns.Size = new System.Drawing.Size(126, 15);
             this.lblPronouns.TabIndex = 13;
-            this.lblPronouns.Text = "Pronouns:";
-            // 
-            // txtboxPronouns
-            // 
-            this.txtboxPronouns.BackColor = System.Drawing.Color.SeaShell;
-            this.txtboxPronouns.Location = new System.Drawing.Point(249, 107);
-            this.txtboxPronouns.Name = "txtboxPronouns";
-            this.txtboxPronouns.Size = new System.Drawing.Size(137, 20);
-            this.txtboxPronouns.TabIndex = 15;
+            this.lblPronouns.Text = "Temperature: (in celcius)";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(55, 75);
+            this.lblAddress.Location = new System.Drawing.Point(53, 74);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(50, 15);
             this.lblAddress.TabIndex = 16;
@@ -130,10 +127,11 @@ namespace Contact_Tracing
             // txtboxAge
             // 
             this.txtboxAge.BackColor = System.Drawing.Color.SeaShell;
-            this.txtboxAge.Location = new System.Drawing.Point(109, 107);
+            this.txtboxAge.Location = new System.Drawing.Point(109, 137);
             this.txtboxAge.Name = "txtboxAge";
-            this.txtboxAge.Size = new System.Drawing.Size(64, 20);
+            this.txtboxAge.Size = new System.Drawing.Size(65, 20);
             this.txtboxAge.TabIndex = 18;
+            this.txtboxAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxAge_KeyPress);
             // 
             // txtboxFirstName
             // 
@@ -143,24 +141,55 @@ namespace Contact_Tracing
             this.txtboxFirstName.Size = new System.Drawing.Size(168, 20);
             this.txtboxFirstName.TabIndex = 21;
             // 
-            // Form1
+            // lblContactNumber
+            // 
+            this.lblContactNumber.AutoSize = true;
+            this.lblContactNumber.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContactNumber.Location = new System.Drawing.Point(13, 103);
+            this.lblContactNumber.Name = "lblContactNumber";
+            this.lblContactNumber.Size = new System.Drawing.Size(90, 15);
+            this.lblContactNumber.TabIndex = 22;
+            this.lblContactNumber.Text = "Contact Number:";
+            // 
+            // txtboxContactNumber
+            // 
+            this.txtboxContactNumber.BackColor = System.Drawing.Color.SeaShell;
+            this.txtboxContactNumber.Location = new System.Drawing.Point(109, 101);
+            this.txtboxContactNumber.Name = "txtboxContactNumber";
+            this.txtboxContactNumber.Size = new System.Drawing.Size(277, 20);
+            this.txtboxContactNumber.TabIndex = 23;
+            this.txtboxContactNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxContactNumber_KeyPress);
+            // 
+            // txtboxTemperature
+            // 
+            this.txtboxTemperature.BackColor = System.Drawing.Color.SeaShell;
+            this.txtboxTemperature.Location = new System.Drawing.Point(322, 137);
+            this.txtboxTemperature.Name = "txtboxTemperature";
+            this.txtboxTemperature.Size = new System.Drawing.Size(65, 20);
+            this.txtboxTemperature.TabIndex = 24;
+            this.txtboxTemperature.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtboxTemperature_KeyPress);
+            // 
+            // ContactTracing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
-            this.ClientSize = new System.Drawing.Size(416, 182);
+            this.ClientSize = new System.Drawing.Size(405, 231);
+            this.Controls.Add(this.txtboxTemperature);
+            this.Controls.Add(this.txtboxContactNumber);
+            this.Controls.Add(this.lblContactNumber);
             this.Controls.Add(this.txtboxFirstName);
             this.Controls.Add(this.txtboxAge);
             this.Controls.Add(this.txtboxAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.txtboxPronouns);
             this.Controls.Add(this.lblPronouns);
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.txtboxLastName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.bttnSave);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "ContactTracing";
             this.ShowIcon = false;
             this.Text = "Contact Tracing";
             this.ResumeLayout(false);
@@ -175,11 +204,13 @@ namespace Contact_Tracing
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label lblPronouns;
-        private System.Windows.Forms.TextBox txtboxPronouns;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtboxAddress;
         private System.Windows.Forms.TextBox txtboxAge;
         private System.Windows.Forms.TextBox txtboxFirstName;
+        private System.Windows.Forms.Label lblContactNumber;
+        private System.Windows.Forms.TextBox txtboxContactNumber;
+        private System.Windows.Forms.TextBox txtboxTemperature;
     }
 }
 

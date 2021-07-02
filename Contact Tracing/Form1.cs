@@ -12,27 +12,58 @@ using System.Windows.Forms;
 
 namespace Contact_Tracing
 {
-    public partial class Form1 : Form
+    public partial class ContactTracing : Form
     {
-        public Form1()
+        public ContactTracing()
         {
             InitializeComponent();
         }
 
         private void bttnSave_Click(object sender, EventArgs e)
         {
-            saveInfo(txtboxFirstName.Text, txtboxLastName.Text, txtboxAddress.Text, byte.Parse(txtboxAge.Text), txtboxPronouns.Text);
+            saveInfo(txtboxFirstName.Text, txtboxLastName.Text, txtboxAddress.Text, txtboxContactNumber.Text, txtboxAge.Text , txtboxTemperature.Text);
         }
 
-        private void saveInfo(String FirstName, String LastName, String Address, byte Age, String Pronouns)
+        private void saveInfo(String FirstName, String LastName, String Address, String ContactNumber, String Age, String Temperature)
         {
             StreamWriter outputfile = File.AppendText("output.txt");
             outputfile.WriteLine(FirstName);
             outputfile.WriteLine(LastName);
             outputfile.WriteLine(Address);
-            outputfile.WriteLine(Age.ToString());
-            outputfile.WriteLine(Pronouns);
+            outputfile.WriteLine(ContactNumber);
+            outputfile.WriteLine(Age);
+            outputfile.WriteLine(Temperature);
             outputfile.Close();
+        }
+
+        private void txtboxContactNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtboxAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtboxTemperature_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
