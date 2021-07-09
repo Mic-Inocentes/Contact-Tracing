@@ -21,19 +21,11 @@ namespace Contact_Tracing
 
         private void bttnSave_Click(object sender, EventArgs e)
         {
-            saveInfo(txtboxFirstName.Text, txtboxLastName.Text, txtboxAddress.Text, txtboxContactNumber.Text, txtboxAge.Text , txtboxTemperature.Text);
-        }
-
-        private void saveInfo(String FirstName, String LastName, String Address, String ContactNumber, String Age, String Temperature)
-        {
-            StreamWriter outputfile = File.AppendText("output.txt");
-            outputfile.WriteLine(FirstName);
-            outputfile.WriteLine(LastName);
-            outputfile.WriteLine(Address);
-            outputfile.WriteLine(ContactNumber);
-            outputfile.WriteLine(Age);
-            outputfile.WriteLine(Temperature);
-            outputfile.Close();
+            Save();
+            StreamReader inputfile;
+            inputfile = File.OpenText("output.txt");
+            MessageBox.Show(inputfile.ReadToEnd());
+            inputfile.Close();
         }
 
         private void txtboxContactNumber_KeyPress(object sender, KeyPressEventArgs e)
@@ -49,7 +41,7 @@ namespace Contact_Tracing
         private void txtboxAge_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            
+
             if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
             {
                 e.Handled = true;
@@ -64,6 +56,18 @@ namespace Contact_Tracing
             {
                 e.Handled = true;
             }
+        }
+
+        private void Save()
+        {
+            StreamWriter outputfile = File.AppendText("output.txt");
+            outputfile.WriteLine(txtboxFirstName.Text);
+            outputfile.WriteLine(txtboxLastName.Text);
+            outputfile.WriteLine(txtboxAddress.Text);
+            outputfile.WriteLine(txtboxContactNumber.Text);
+            outputfile.WriteLine(txtboxAge.Text);
+            outputfile.WriteLine(txtboxTemperature.Text);
+            outputfile.Close();
         }
     }
 }

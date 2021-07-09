@@ -189,6 +189,7 @@ namespace Contact_Tracing
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.bttnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ContactTracing";
             this.ShowIcon = false;
             this.Text = "Contact Tracing";
